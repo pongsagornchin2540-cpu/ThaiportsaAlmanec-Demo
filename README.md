@@ -4,8 +4,6 @@
 
 ## เปิดดูออนไลน์
 
-หลังเปิด GitHub Pages แล้ว ใช้ลิงก์:
-
 **https://pongsagornchin2540-cpu.github.io/ThaiportsaAlmanec-Demo/**
 
 ## เปิดดูบนเครื่อง
