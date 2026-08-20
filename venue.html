@@ -1,0 +1,206 @@
+﻿<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script>
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    window.scrollTo(0, 0);
+  </script>
+  <meta name="description" content="รายละเอียดสนามและสถานที่กีฬา — Thailand Sports Almanac">
+  <meta name="theme-color" content="#eef3f8">
+  <title>รายละเอียดสนาม — Thailand Sports Almanac</title>
+  <link rel="icon" href="assets/images/logo-new-transparent.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site-nav.css?v=20260820-2">
+<link rel="stylesheet" href="assets/visitor-gateway.css?v=20260820-38">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="assets/design-language.css?v=20260820-4">
+  <link rel="stylesheet" href="assets/venue-detail.css?v=20260820-9">
+  <link rel="stylesheet" href="assets/login-modal.css?v=20260820-7">
+  <link rel="stylesheet" href="assets/site-foundation.css?v=20260820-11">
+</head>
+<body id="top" class="venue-detail-page tpl-detail-map">
+  <a class="skip" href="#main">ข้ามไปยังเนื้อหาหลัก</a>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="nav-shell">
+    <a class="brand" href="index.html#top" aria-label="หน้าหลัก"><img src="assets/images/logo-new-transparent.png" alt="Thailand Sports Almanac"></a>
+    <nav class="desktop-nav" aria-label="เมนูหลัก">
+      <a class="nav-primary-link" href="index.html">หน้าหลัก</a>
+      <a class="nav-primary-link" href="abouts.html">เกี่ยวกับเรา</a>
+      <div class="nav-group">
+        <button class="nav-primary-link nav-dropdown-trigger" type="button" aria-expanded="false" aria-current="true">สนาม <span>⌄</span></button>
+        <div class="nav-dropdown venue-dropdown">
+          <a href="venues.html?type=stadium">สนามกีฬา</a>
+          <a href="venues.html?type=multipurpose">อาคารอเนกประสงค์</a>
+          <a href="venues.html?type=public">ลานกีฬา / สวนสาธารณะ</a>
+          <a href="venues.html?type=fitness">ฟิตเนส / ยิม</a>
+          <a href="venues.html?type=training">ศูนย์ฝึกกีฬา</a>
+          <a href="venues.html?type=science">ศูนย์วิทยาศาสตร์การกีฬา</a>
+        </div>
+      </div>
+      <div class="nav-group">
+        <button class="nav-primary-link nav-dropdown-trigger" type="button" aria-expanded="false">ข่าวและกิจกรรม <span>⌄</span></button>
+        <div class="nav-dropdown compact-dropdown"><a href="index.html#gateway-services">ข่าวประกาศ</a><a href="activities.html">ปฏิทินกิจกรรม</a></div>
+      </div>
+      <div class="nav-group">
+        <button class="nav-primary-link nav-dropdown-trigger" type="button" aria-expanded="false">ข้อมูลและสถิติ <span>⌄</span></button>
+        <div class="nav-dropdown compact-dropdown stats-dropdown">
+          <div class="nav-subgroup">
+            <b>แดชบอร์ด</b>
+            <a href="athletes.html">นักกีฬา / บุคลากร</a>
+            <a href="results.html">ผลการแข่งขัน</a>
+            <a href="overview.html">สรุปภาพรวม</a>
+            <a href="provinces.html">ข้อมูลรายจังหวัด</a>
+          </div>
+          <a href="courses.html">หลักสูตรอบรม</a>
+          <a href="index.html#story">คลังความรู้</a>
+        </div>
+      </div>
+      <div class="nav-group">
+        <button class="nav-primary-link nav-dropdown-trigger" type="button" aria-expanded="false">ช่วยเหลือ <span>⌄</span></button>
+        <div class="nav-dropdown compact-dropdown"><a href="index.html#footer">คู่มือใช้งาน</a><a href="index.html#footer">คำถามที่พบบ่อย (FAQ)</a><a href="contact.html">ติดต่อเรา</a></div>
+      </div>
+    </nav>
+    <div class="nav-actions"><a class="login" href="#login">เข้าสู่ระบบ <span>↗</span></a><button class="menu-button" type="button" aria-label="เปิดเมนูหลัก" aria-expanded="false" aria-controls="mobile-menu"><i></i><i></i></button></div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a class="mobile-direct" href="index.html">หน้าหลัก</a>
+      <a class="mobile-direct" href="abouts.html">เกี่ยวกับเรา</a>
+      <div class="mobile-accordion"><button class="mobile-accordion-trigger" type="button" aria-expanded="false">สนาม <span>＋</span></button><div class="mobile-submenu"><a href="venues.html?type=stadium">สนามกีฬา</a><a href="venues.html?type=multipurpose">อาคารอเนกประสงค์</a><a href="venues.html?type=public">ลานกีฬา / สวนสาธารณะ</a><a href="venues.html?type=fitness">ฟิตเนส / ยิม</a><a href="venues.html?type=training">ศูนย์ฝึกกีฬา</a><a href="venues.html?type=science">ศูนย์วิทยาศาสตร์การกีฬา</a></div></div>
+      <div class="mobile-accordion"><button class="mobile-accordion-trigger" type="button" aria-expanded="false">ข่าวและกิจกรรม <span>＋</span></button><div class="mobile-submenu"><a href="index.html#gateway-services">ข่าวประกาศ</a><a href="activities.html">ปฏิทินกิจกรรม</a></div></div>
+      <div class="mobile-accordion"><button class="mobile-accordion-trigger" type="button" aria-expanded="false">ข้อมูลและสถิติ <span>＋</span></button><div class="mobile-submenu"><b>แดชบอร์ด</b><a class="nav-nested" href="athletes.html">นักกีฬา / บุคลากร</a><a class="nav-nested" href="results.html">ผลการแข่งขัน</a><a class="nav-nested" href="overview.html">สรุปภาพรวม</a><a class="nav-nested" href="provinces.html">ข้อมูลรายจังหวัด</a><a href="courses.html">หลักสูตรอบรม</a><a href="index.html#story">คลังความรู้</a></div></div>
+      <div class="mobile-accordion"><button class="mobile-accordion-trigger" type="button" aria-expanded="false">ช่วยเหลือ <span>＋</span></button><div class="mobile-submenu"><a href="index.html#footer">คู่มือใช้งาน</a><a href="index.html#footer">คำถามที่พบบ่อย (FAQ)</a><a href="contact.html">ติดต่อเรา</a></div></div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="venue-detail-top">
+      <nav class="venue-detail-back" aria-label="ย้อนกลับ">
+        <a id="venue-back-link" href="venues.html">← กลับไปรายการสนาม</a>
+      </nav>
+    </div>
+
+    <section class="venue-gallery" aria-label="รูปภาพสนาม">
+      <div class="venue-gallery-hero" id="venue-hero">
+        <img id="venue-hero-img" src="assets/images/stadium-1.jpg" alt="">
+        <button type="button" class="venue-gallery-nav prev" id="venue-gallery-prev" aria-label="รูปก่อนหน้า" hidden>‹</button>
+        <button type="button" class="venue-gallery-nav next" id="venue-gallery-next" aria-label="รูปถัดไป" hidden>›</button>
+        <span class="venue-gallery-count" id="venue-gallery-count" hidden></span>
+      </div>
+      <div class="venue-gallery-thumbs" id="venue-thumbs" hidden></div>
+    </section>
+
+    <div class="venue-swoosh" aria-hidden="true">
+      <svg viewBox="0 0 1440 64" preserveAspectRatio="none" focusable="false">
+        <path fill="currentColor" d="M0,24 C240,64 480,0 720,28 C960,56 1200,8 1440,36 L1440,64 L0,64 Z"></path>
+      </svg>
+    </div>
+
+    <div class="venue-detail-shell">
+      <div class="venue-detail-layout" id="venue-detail">
+        <div class="venue-detail-panel">
+          <div class="venue-detail-main">
+            <section class="venue-block venue-hero-copy venue-reveal is-loading">
+              <div class="venue-tags" id="venue-tags"></div>
+              <h1 id="venue-title">กำลังโหลด…</h1>
+              <p class="venue-lead" id="venue-summary">—</p>
+              <div class="venue-quick-actions" id="venue-quick-actions" hidden>
+                <a class="secondary" id="venue-call-btn" href="#" hidden>
+                  <svg class="venue-ico" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+                  โทร
+                </a>
+              </div>
+            </section>
+
+            <section class="venue-block venue-reveal" id="venue-sports-section" hidden>
+              <h2>ชนิดกีฬาที่รองรับ</h2>
+              <ul class="venue-facilities" id="venue-sports"></ul>
+            </section>
+
+            <section class="venue-block venue-reveal" id="venue-detail-section" hidden>
+              <h2>รายละเอียด</h2>
+              <p class="venue-prose" id="venue-detail-text"></p>
+            </section>
+
+            <section class="venue-block venue-reveal" id="venue-travel-section" hidden>
+              <h2>การเดินทาง</h2>
+              <p class="venue-prose" id="venue-travel-text"></p>
+            </section>
+
+            <section class="venue-block venue-reveal" id="venue-facilities-section" hidden>
+              <h2>สิ่งอำนวยสะดวก</h2>
+              <ul class="venue-facilities" id="venue-facilities"></ul>
+            </section>
+
+            <section class="venue-block venue-reveal" id="venue-contacts-section" hidden>
+              <h2>ติดต่อ</h2>
+              <ul class="venue-contacts" id="venue-contacts"></ul>
+              <div class="venue-links" id="venue-links" style="margin-top:12px"></div>
+            </section>
+
+            <section class="venue-block venue-reveal" id="venue-subs-section" hidden>
+              <h2>สนามกีฬาภายใน</h2>
+              <div class="venue-subs" id="venue-subs"></div>
+            </section>
+          </div>
+
+          <aside class="venue-detail-side">
+            <section class="venue-block">
+              <h2>ข้อมูลสนาม</h2>
+              <dl class="venue-meta-grid" id="venue-meta"></dl>
+            </section>
+
+            <section class="venue-block" id="venue-hours-section" hidden>
+              <h2>วันเวลาเปิดให้บริการ</h2>
+              <ul class="venue-hours" id="venue-hours"></ul>
+            </section>
+
+            <section class="venue-block" id="venue-map-section" hidden>
+              <h2>แผนที่</h2>
+              <div class="venue-map" id="venue-map"></div>
+              <div class="venue-actions" style="margin-top:12px">
+                <a class="primary" id="venue-map-link" href="#" target="_blank" rel="noopener noreferrer" hidden>
+                  <svg class="venue-ico" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  เปิดใน Google Maps
+                </a>
+              </div>
+              <a class="venue-almanac-link" id="venue-almanac-link" href="https://sports-almanac.go.th/stadium/" target="_blank" rel="noopener noreferrer">
+                ดูใน Sports Almanac
+                <svg class="venue-ico" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </section>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <nav class="venue-sticky-bar" id="venue-sticky-bar" aria-label="การดำเนินการด่วน" hidden>
+    <a class="venue-sticky-btn call" id="venue-sticky-call" href="#" hidden>
+      <svg class="venue-ico" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+      โทร
+    </a>
+    <a class="venue-sticky-btn nav" id="venue-sticky-nav" href="#" target="_blank" rel="noopener noreferrer" hidden>
+      <svg class="venue-ico" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      นำทาง
+    </a>
+  </nav>
+
+  <footer id="footer">
+    <div class="footer-brand"><img src="assets/images/logo-new-transparent.png" alt="Thailand Sports Almanac"><p>DIGITAL SPORTS GATEWAY FOR ALL</p></div>
+    <div><h3>สำรวจ</h3><a href="index.html#nation">แผนที่กีฬา</a><a href="venues.html">สนามกีฬา</a><a href="index.html#gateway-services">กิจกรรม</a></div>
+    <div><h3>ข้อมูล</h3><a href="dashboard.html">แดชบอร์ด</a><a href="provinces.html">ข้อมูลรายจังหวัด</a></div>
+    <address><h3>สำนักงานปลัดกระทรวง<br>การท่องเที่ยวและกีฬา</h3><p>เลขที่ 120 หมู่ 3 ศูนย์ราชการเฉลิมพระเกียรติฯ<br>อาคาร C ถนนแจ้งวัฒนะ<br>เขตหลักสี่ กรุงเทพฯ 10210</p><a href="mailto:policy.tkc@mots.go.th">policy.tkc@mots.go.th</a></address>
+    <div class="footer-bottom"><span>© 2026 THAILAND SPORTS ALMANAC</span><span>WCAG 2.1 AA</span></div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="assets/venue-extras.js?v=20260820-3"></script>
+  <script src="assets/venue-detail.js?v=20260820-11"></script>
+  <script src="assets/portal-nav.js?v=20260820-4"></script>
+  <script src="assets/login-modal.js?v=20260820-7"></script>
+</body>
+</html>

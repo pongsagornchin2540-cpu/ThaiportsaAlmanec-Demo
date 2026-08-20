@@ -1,0 +1,593 @@
+.venue-detail-page {
+  --paper: #f3f6f9;
+  --ink: #071b34;
+  --muted: #5d7188;
+  --line: rgba(7, 27, 52, 0.1);
+  --blue: #126cf3;
+  background:
+    radial-gradient(ellipse 80% 50% at 10% -10%, rgba(18, 108, 243, 0.12), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 100% 0%, rgba(186, 255, 25, 0.14), transparent 50%),
+    linear-gradient(180deg, #eef3f8 0%, var(--paper) 28%, #edf1f5 100%);
+  color: var(--ink);
+  min-height: 100vh;
+}
+
+.venue-detail-top {
+  width: min(1200px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 100px 0 12px;
+}
+
+.venue-detail-back a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font: 600 12px/1.4 "Noto Sans Thai", sans-serif;
+  text-decoration: none;
+}
+
+.venue-detail-back a:hover {
+  color: var(--blue);
+}
+
+.venue-detail-shell {
+  width: min(1200px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 18px 0 72px;
+}
+
+.venue-detail-layout {
+  display: grid;
+  gap: 18px;
+}
+
+.venue-gallery {
+  width: 100%;
+  background: #071526;
+  box-shadow: 0 20px 48px rgba(7, 27, 52, 0.14);
+}
+
+.venue-gallery-hero {
+  position: relative;
+  height: clamp(240px, 38vh, 440px);
+  background: #0d2138;
+}
+
+.venue-gallery-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.venue-gallery-nav {
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  color: #071b34;
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
+}
+
+.venue-gallery-nav.prev { left: 16px; }
+.venue-gallery-nav.next { right: 16px; }
+
+.venue-gallery-nav:hover {
+  background: #fff;
+}
+
+.venue-gallery-count {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 2;
+  padding: 8px 13px;
+  border-radius: 999px;
+  background: rgba(7, 27, 52, 0.72);
+  color: #fff;
+  font: 650 12px/1 "Noto Sans Thai", sans-serif;
+  backdrop-filter: blur(8px);
+}
+
+.venue-gallery-thumbs {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 112px;
+  gap: 10px;
+  padding: 12px 16px 14px;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  background: #eef3f8;
+  border-top: 1px solid rgba(7, 27, 52, 0.08);
+}
+
+.venue-gallery-thumbs button {
+  border: 0;
+  padding: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  cursor: pointer;
+  background: #d7e1ec;
+  opacity: 0.85;
+  outline: 2px solid transparent;
+  outline-offset: 1px;
+  transition: opacity 0.2s ease, outline-color 0.2s ease, transform 0.2s ease;
+}
+
+.venue-gallery-thumbs button.is-active,
+.venue-gallery-thumbs button:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.venue-gallery-thumbs button.is-active {
+  outline-color: #126cf3;
+}
+
+.venue-gallery-thumbs img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.venue-detail-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.venue-detail-main,
+.venue-detail-side {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+}
+
+.venue-detail-side {
+  position: sticky;
+  top: 88px;
+}
+
+.venue-block {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 8px 24px rgba(7, 27, 52, 0.04);
+  padding: 18px 20px;
+}
+
+.venue-hero-copy .venue-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.venue-hero-copy .venue-tags span {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: #e8f0fb;
+  color: #1d4f91;
+  font: 650 11px/1 "Noto Sans Thai", sans-serif;
+}
+
+.venue-hero-copy .venue-kicker {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font: 700 11px/1 "Noto Sans Thai", sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.venue-hero-copy h1 {
+  margin: 0 0 8px;
+  font: 700 clamp(22px, 1.8vw, 28px)/1.25 "Noto Sans Thai", sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.venue-hero-copy .venue-lead {
+  margin: 0;
+  color: var(--muted);
+  font: 500 13px/1.65 "Noto Sans Thai", sans-serif;
+  white-space: pre-line;
+}
+
+.venue-quick-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.venue-quick-actions a,
+.venue-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 40px;
+  padding: 9px 14px;
+  border-radius: 999px;
+  font: 700 12px/1 "Noto Sans Thai", sans-serif;
+  text-decoration: none;
+}
+
+.venue-quick-actions a.primary,
+.venue-actions a.primary {
+  background: var(--blue);
+  color: #fff;
+}
+
+.venue-quick-actions a.primary:hover,
+.venue-actions a.primary:hover {
+  filter: brightness(1.06);
+}
+
+.venue-quick-actions a.secondary {
+  background: #fff;
+  color: var(--ink);
+  border: 1px solid rgba(7, 27, 52, 0.14);
+}
+
+.venue-quick-actions a.secondary:hover {
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+.venue-ico {
+  flex: 0 0 auto;
+  display: block;
+}
+
+.venue-almanac-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  color: var(--muted);
+  font: 600 12px/1.4 "Noto Sans Thai", sans-serif;
+  text-decoration: none;
+}
+
+.venue-almanac-link:hover {
+  color: var(--blue);
+}
+
+.venue-block h2 {
+  margin: 0 0 10px;
+  font: 700 15px/1.35 "Noto Sans Thai", sans-serif;
+}
+
+.venue-prose {
+  margin: 0;
+  color: #33485f;
+  font: 500 13.5px/1.7 "Noto Sans Thai", sans-serif;
+  white-space: pre-line;
+}
+
+.venue-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin: 0;
+}
+
+.venue-meta-grid > div {
+  border: 1px solid rgba(7, 27, 52, 0.07);
+  border-radius: 12px;
+  background: #f7fafc;
+  padding: 10px 12px;
+}
+
+.venue-meta-grid dt {
+  margin: 0 0 3px;
+  color: #7a8ba0;
+  font: 600 11px/1.3 "Noto Sans Thai", sans-serif;
+}
+
+.venue-meta-grid dd {
+  margin: 0;
+  font: 650 13px/1.4 "Noto Sans Thai", sans-serif;
+  color: var(--ink);
+  word-break: break-word;
+}
+
+.venue-hours {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.venue-hours li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: #f7fafc;
+  border: 1px solid rgba(7, 27, 52, 0.06);
+  font: 500 12px/1.4 "Noto Sans Thai", sans-serif;
+}
+
+.venue-hours span:first-child {
+  color: #4d6278;
+  font-weight: 650;
+}
+
+.venue-facilities {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.venue-facilities li {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #eef6ff;
+  color: #1d4f91;
+  font: 650 12px/1.3 "Noto Sans Thai", sans-serif;
+}
+
+.venue-contacts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.venue-contacts li {
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #f7fafc;
+  border: 1px solid rgba(7, 27, 52, 0.06);
+}
+
+.venue-contacts strong {
+  display: block;
+  margin-bottom: 3px;
+  font: 700 13px/1.35 "Noto Sans Thai", sans-serif;
+}
+
+.venue-contacts a,
+.venue-contacts span {
+  color: var(--blue);
+  font: 500 12px/1.4 "Noto Sans Thai", sans-serif;
+  text-decoration: none;
+}
+
+.venue-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.venue-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(7, 27, 52, 0.12);
+  color: var(--ink);
+  font: 650 12px/1 "Noto Sans Thai", sans-serif;
+  text-decoration: none;
+  background: #fff;
+}
+
+.venue-links a:hover {
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+.venue-map {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #d8e2ec;
+  width: 100%;
+  height: 240px;
+  min-height: 240px;
+  z-index: 0;
+}
+
+.venue-map .leaflet-container {
+  width: 100%;
+  height: 100%;
+  font: inherit;
+}
+
+.venue-map .leaflet-control-attribution {
+  font-size: 10px;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.venue-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.venue-sticky-bar {
+  position: fixed;
+  z-index: 90;
+  left: 12px;
+  right: 12px;
+  bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(7, 27, 52, 0.1);
+  backdrop-filter: blur(14px);
+}
+
+.venue-sticky-bar:not([hidden]) {
+  display: grid;
+}
+
+.venue-sticky-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px;
+  border-radius: 14px;
+  font: 700 14px/1 "Noto Sans Thai", sans-serif;
+  text-decoration: none;
+}
+
+.venue-sticky-btn.call {
+  background: #fff;
+  color: var(--ink);
+  border: 1px solid rgba(7, 27, 52, 0.14);
+}
+
+.venue-sticky-btn.nav {
+  background: var(--blue);
+  color: #fff;
+}
+
+.venue-sticky-btn[hidden] {
+  display: none !important;
+}
+
+.venue-detail-page.has-sticky-actions {
+  padding-bottom: 88px;
+}
+
+.venue-subs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.venue-sub {
+  display: block;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #f4f7fa;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid rgba(7, 27, 52, 0.06);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.venue-sub:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(7, 27, 52, 0.1);
+}
+
+.venue-sub img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  background: #d8e2ec;
+}
+
+.venue-sub strong {
+  display: block;
+  padding: 9px 11px 11px;
+  font: 650 12px/1.4 "Noto Sans Thai", sans-serif;
+}
+
+@media (max-width: 900px) {
+  .venue-detail-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .venue-detail-side {
+    position: static;
+  }
+
+  .venue-sticky-bar:not([hidden]) {
+    display: grid;
+  }
+
+  .venue-quick-actions {
+    display: none;
+  }
+}
+
+@media (min-width: 901px) {
+  .venue-sticky-bar {
+    display: none !important;
+  }
+
+  .venue-detail-page.has-sticky-actions {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 720px) {
+  .venue-detail-top {
+    width: min(100% - 20px, 1200px);
+    padding: 92px 0 12px;
+  }
+
+  .venue-detail-shell {
+    width: min(100% - 20px, 1200px);
+    padding: 16px 0 56px;
+  }
+
+  .venue-gallery-hero {
+    height: clamp(200px, 34vh, 320px);
+  }
+
+  .venue-gallery-nav {
+    width: 44px;
+    height: 44px;
+    font-size: 24px;
+  }
+
+  .venue-gallery-nav.prev { left: 10px; }
+  .venue-gallery-nav.next { right: 10px; }
+
+  .venue-gallery-thumbs {
+    grid-auto-columns: 86px;
+    padding: 10px 12px 12px;
+  }
+
+  .venue-block {
+    border-radius: 14px;
+    padding: 16px 14px;
+  }
+
+  .venue-meta-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .venue-hero-copy h1 {
+    font-size: clamp(20px, 5.5vw, 24px);
+  }
+
+  .venue-map {
+    height: 220px;
+    min-height: 220px;
+  }
+}

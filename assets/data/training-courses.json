@@ -1,0 +1,52 @@
+{
+  "status": "success",
+  "source": "sports_almanac_db",
+  "generated_at": "2026-08-20T06:29:02.901Z",
+  "courses": [
+    {
+      "id": "11",
+      "name": "การพัฒนานวัตกรต้นแบบเพื่อขับเคลื่อนนวัตกรรม การส่งเสริมการออกกำลังกายในเด็กและเยาวชน (4/2569)",
+      "category_name": "ครูผู้สอนพลศึกษา",
+      "level_name": "ระดับชาติ",
+      "year": "2569",
+      "date_display": "รุ่นที่ 4 · พ.ศ. 2569",
+      "image_cover": "https://sports-almanac.go.th/wp-content/uploads/2026/02/1772098352_training_.png",
+      "location_display": "โรงแรมทวินโลตัส นครศรีธรรมราช",
+      "url": "https://sports-almanac.go.th/course/?page_display=course_detail&training_id=11"
+    },
+    {
+      "id": "10",
+      "name": "การพัฒนานวัตกรต้นแบบเพื่อขับเคลื่อนนวัตกรรม การส่งเสริมการออกกำลังกายในเด็กและเยาวชน (3/2569)",
+      "category_name": "ครูผู้สอนพลศึกษา",
+      "level_name": "ระดับชาติ",
+      "year": "2569",
+      "date_display": "รุ่นที่ 3 · พ.ศ. 2569",
+      "image_cover": "https://sports-almanac.go.th/wp-content/uploads/2026/02/1772098336_training_.png",
+      "location_display": "โรงแรมดิเอ็มเพรส เชียงใหม่",
+      "url": "https://sports-almanac.go.th/course/?page_display=course_detail&training_id=10"
+    },
+    {
+      "id": "9",
+      "name": "การพัฒนานวัตกรต้นแบบเพื่อขับเคลื่อนนวัตกรรม การส่งเสริมการออกกำลังกายในเด็กและเยาวชน (2/2569)",
+      "category_name": "ครูผู้สอนพลศึกษา",
+      "level_name": "ระดับชาติ",
+      "year": "2569",
+      "date_display": "รุ่นที่ 2 · พ.ศ. 2569",
+      "image_cover": "https://sports-almanac.go.th/wp-content/uploads/2026/02/1770100110_training_.jpg",
+      "location_display": "โรงแรมประจักษ์ตรา ดีไซน์ โฮเทล",
+      "url": "https://sports-almanac.go.th/course/?page_display=course_detail&training_id=9"
+    },
+    {
+      "id": "8",
+      "name": "การพัฒนานวัตกรต้นแบบเพื่อขับเคลื่อนนวัตกรรม การส่งเสริมการออกกำลังกายในเด็กและเยาวชน (1/2569)",
+      "category_name": "ครูผู้สอนพลศึกษา",
+      "level_name": "ระดับชาติ",
+      "year": "2569",
+      "date_display": "รุ่นที่ 1 · พ.ศ. 2569",
+      "image_cover": "https://sports-almanac.go.th/wp-content/uploads/2026/02/1770092985_training_.jpg",
+      "location_display": "โรงแรมไมด้า ทวารวดี แกรนด์",
+      "url": "https://sports-almanac.go.th/course/?page_display=course_detail&training_id=8"
+    }
+  ],
+  "total_count": 4
+}

@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Thailand Sports Almanac ศูนย์กลางข้อมูลกีฬา สนาม กิจกรรม และสถิติการกีฬาของประเทศไทย">
+  <meta name="theme-color" content="#071a3d">
+  <meta property="og:title" content="Thailand Sports Almanac">
+  <meta property="og:description" content="Digital Sports Gateway for All — ประตูสู่ข้อมูลกีฬาของคนไทยทุกคน">
+  <meta property="og:image" content="assets/images/hero-sports-thailand.png">
+  <title>Thailand Sports Almanac — Digital Sports Gateway for All</title>
+  <link rel="icon" href="assets/images/thailand-sports-almanac-logo.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300..900&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/editorial.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">ข้ามไปยังเนื้อหาหลัก</a>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Thailand Sports Almanac หน้าหลัก">
+        <img src="assets/images/thailand-sports-almanac-logo.jpg" alt="Thailand Sports Almanac">
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="เปิดเมนู">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="primary-nav" id="primary-nav" aria-label="เมนูหลัก">
+        <a class="active" href="#top">หน้าหลัก</a>
+        <a href="#about">เกี่ยวกับเรา</a>
+        <div class="nav-group">
+          <button type="button" aria-expanded="false">สนาม <span>⌄</span></button>
+          <div class="dropdown">
+            <a href="#venues">สนามกีฬา</a><a href="#venues">อาคารอเนกประสงค์</a><a href="#venues">ลานกีฬา / สวนสาธารณะ</a><a href="#venues">ศูนย์ฝึกกีฬา</a>
+          </div>
+        </div>
+        <a href="#dashboard">ข้อมูลและสถิติ</a>
+        <a href="#events">ข่าวและกิจกรรม</a>
+        <a href="#footer">ช่วยเหลือ</a>
+      </nav>
+      <div class="header-actions">
+        <button class="lang" type="button" aria-label="เปลี่ยนภาษา">TH <span>/ EN</span></button>
+        <a class="login-button" href="#login"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg>เข้าสู่ระบบ</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-ghost" aria-hidden="true">THAILAND</div>
+      <div class="hero-media" aria-hidden="true"></div>
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="swoosh one" aria-hidden="true"></div><div class="swoosh two" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <div class="eyebrow hero-reveal"><span></span> สารานุกรมกีฬาประเทศไทย</div>
+        <h1 id="hero-title" class="hero-reveal">ข้อมูลกีฬาไทย<br><em>เชื่อมโยงทุกคน</em></h1>
+        <p class="hero-copy hero-reveal">ค้นพบกิจกรรม สนามกีฬา บุคลากร และข้อมูลเชิงสถิติจากทั่วประเทศ ในศูนย์กลางข้อมูลกีฬาดิจิทัลที่ทุกคนเข้าถึงได้</p>
+        <p class="motto hero-reveal">DIGITAL SPORTS GATEWAY FOR ALL</p>
+
+        <form class="quick-search hero-reveal" id="quick-search" role="search">
+          <label class="sr-only" for="search-input">ค้นหาข้อมูลกีฬา</label>
+          <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+          <input id="search-input" name="q" type="search" placeholder="ค้นหากิจกรรม สนามกีฬา จังหวัด หรือประเภทกีฬา..." autocomplete="off">
+          <button type="submit">ค้นหา</button>
+          <div class="search-results" id="search-results" role="status" aria-live="polite"></div>
+        </form>
+
+        <div class="quick-links hero-reveal" aria-label="คำค้นยอดนิยม"><span>ค้นหายอดนิยม:</span><button data-query="ฟุตบอล">ฟุตบอล</button><button data-query="กรุงเทพมหานคร">กรุงเทพมหานคร</button><button data-query="ศูนย์ฝึกกีฬา">ศูนย์ฝึกกีฬา</button></div>
+
+        <dl class="stats" aria-label="สถิติในระบบ">
+          <div><dt><strong class="stat-number" data-count="5971">0</strong><small>+</small></dt><dd>กิจกรรมกีฬา</dd></div>
+          <div><dt><strong class="stat-number" data-count="21454">0</strong><small>+</small></dt><dd>สนามทั่วประเทศ</dd></div>
+          <div><dt><strong class="stat-number" data-count="167">0</strong><small></small></dt><dd>ประเภทกีฬา</dd></div>
+          <div><dt><strong class="stat-number" data-count="77">0</strong><small></small></dt><dd>จังหวัด</dd></div>
+        </dl>
+      </div>
+      <div class="hero-float sport-float" aria-hidden="true"><b>167</b><span>SPORTS<br>CONNECTED</span></div>
+      <div class="hero-float pulse-float" aria-hidden="true"><i></i><span>LIVE<br>DATA</span></div>
+      <div class="hero-index" aria-hidden="true"><b>01</b><span></span><small>SPORTS<br>FOR ALL</small></div>
+      <a href="#events" class="scroll-cue"><span>เลื่อนเพื่อสำรวจ</span><i></i></a>
+    </section>
+
+    <section class="section events-section" id="events" aria-labelledby="events-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div><span class="kicker">WHAT'S ON</span><h2 id="events-title">กิจกรรมกีฬาที่กำลังจะมาถึง</h2><p>ร่วมเชียร์ ร่วมเล่น และเป็นส่วนหนึ่งของวงการกีฬาไทย</p></div>
+          <div class="carousel-controls"><button type="button" id="event-prev" aria-label="กิจกรรมก่อนหน้า">←</button><button type="button" id="event-next" aria-label="กิจกรรมถัดไป">→</button></div>
+        </div>
+        <div class="filter-row reveal" aria-label="กรองกิจกรรม">
+          <button class="filter-chip active" data-filter="all">ทั้งหมด</button><button class="filter-chip" data-filter="ฟุตบอล">ฟุตบอล</button><button class="filter-chip" data-filter="กรีฑา">กรีฑา</button><button class="filter-chip" data-filter="นันทนาการ">นันทนาการ</button>
+        </div>
+        <div class="event-track" id="event-track" tabindex="0" aria-label="รายการกิจกรรมกีฬา"></div>
+        <p class="data-note reveal"><span></span> ข้อมูลจากฐานข้อมูล Sports Almanac · ปรับปรุงข้อมูลล่าสุด สิงหาคม 2569</p>
+      </div>
+    </section>
+
+    <section class="section venue-section" id="venues" aria-labelledby="venues-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div><span class="kicker">PLACES TO PLAY</span><h2 id="venues-title">สนามกีฬาและศูนย์ฝึกแนะนำ</h2><p>พื้นที่พร้อมใช้งานสำหรับทุกระดับ ตั้งแต่ชุมชนถึงมืออาชีพ</p></div>
+          <a class="text-link" href="#venues">ดูสนามทั้งหมด <span>↗</span></a>
+        </div>
+        <div class="venue-layout">
+          <div class="venue-grid" id="venue-grid"></div>
+          <div class="mini-map reveal" aria-label="แผนที่สนามกีฬาโดยสังเขป">
+            <div class="map-top"><div><small>SPORTS FACILITIES</small><strong>สนามกีฬาทั่วไทย</strong></div><span class="live-dot">ข้อมูลพร้อมใช้งาน</span></div>
+            <div class="map-canvas">
+              <svg class="thai-map" viewBox="0 0 300 500" aria-hidden="true"><path d="M111 18l45 21 28 36 39 11 13 43-26 42 12 50-28 32-8 52 29 39-20 35-38-27-16 33 8 55-27 55-15-8 4-67-26-51 12-40-33-40 6-50-16-32 24-31-9-46 28-28z"/></svg>
+              <button class="map-pin p1" data-venue="อินดอร์สเตเดียมหัวหมาก" aria-label="อินดอร์สเตเดียมหัวหมาก"><i></i><span>กรุงเทพฯ</span></button>
+              <button class="map-pin p2" data-venue="ศูนย์ฝึกกีฬาแห่งชาติมวกเหล็ก" aria-label="ศูนย์ฝึกกีฬาแห่งชาติมวกเหล็ก"><i></i><span>สระบุรี</span></button>
+              <button class="map-pin p3" data-venue="สนามกีฬาองค์การบริหารส่วนจังหวัดสระบุรี" aria-label="สนามกีฬาองค์การบริหารส่วนจังหวัดสระบุรี"><i></i></button>
+              <div class="map-legend"><span><i></i> สนามกีฬา</span><span><i></i> ศูนย์ฝึก</span></div>
+            </div>
+            <div class="map-summary"><div><strong>21,454</strong><span>สนามกีฬา</span></div><div><strong>70</strong><span>ศูนย์ฝึก</span></div><div><strong>72</strong><span>ศูนย์วิทยาศาสตร์</span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="associations" id="about" aria-labelledby="associations-title">
+      <div class="container association-intro reveal"><span class="kicker light">SPORTS NETWORK</span><h2 id="associations-title">เครือข่ายกีฬาไทย<br>เติบโตไปด้วยกัน</h2><p>เชื่อมโยงหน่วยงานกีฬาและชุมชนนักกีฬาทั่วประเทศ</p></div>
+      <div class="marquee" aria-label="เครือข่ายประเภทกีฬา"><div class="marquee-track" id="association-track"></div></div>
+    </section>
+
+    <section class="section dashboard-section" id="dashboard" aria-labelledby="dashboard-title">
+      <div class="container dashboard-layout">
+        <div class="dashboard-copy reveal"><span class="kicker">DATA-DRIVEN SPORTS</span><h2 id="dashboard-title">เห็นภาพกีฬาไทย<br>ผ่านข้อมูลที่เข้าใจง่าย</h2><p>เปลี่ยนข้อมูลจากทั่วประเทศให้เป็นภาพรวมที่พร้อมใช้ วางแผน ติดตาม และตัดสินใจได้อย่างแม่นยำ</p><ul><li><i>✓</i> วิเคราะห์ข้อมูลระดับประเทศและจังหวัด</li><li><i>✓</i> ติดตามแนวโน้มกิจกรรมและโครงสร้างพื้นฐาน</li><li><i>✓</i> ดาวน์โหลดข้อมูลเพื่อนำไปใช้ต่อ</li></ul><a href="#dashboard" class="primary-button">เข้าสู่แดชบอร์ด <span>↗</span></a></div>
+        <div class="dashboard-preview reveal">
+          <div class="dash-toolbar"><div><small>ภาพรวมระดับประเทศ</small><strong>โครงสร้างพื้นฐานกีฬา</strong></div><button type="button">ปี 2569⌄</button></div>
+          <div class="dash-kpis"><div><span>สนามกีฬา</span><strong>21,454</strong><small class="positive">↑ 8.4%</small></div><div><span>ศูนย์ฝึกกีฬา</span><strong>70</strong><small>ทั่วประเทศ</small></div><div><span>กิจกรรม</span><strong>5,971</strong><small class="positive">↑ 12.1%</small></div></div>
+          <div class="chart-card"><div class="chart-head"><strong>กิจกรรมกีฬาแยกตามภูมิภาค</strong><span>จำนวนรายการ</span></div><div class="bars"><div><span>ภาคกลาง</span><i style="--value:89%"></i><b>1,872</b></div><div><span>ภาคเหนือ</span><i style="--value:72%"></i><b>1,421</b></div><div><span>อีสาน</span><i style="--value:65%"></i><b>1,186</b></div><div><span>ภาคใต้</span><i style="--value:51%"></i><b>892</b></div><div><span>ตะวันออก</span><i style="--value:38%"></i><b>600</b></div></div></div>
+          <div class="dash-orbit one"></div><div class="dash-orbit two"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="footer">
+    <div class="footer-watermark">THAILAND<br>SPORTS</div>
+    <div class="container footer-main">
+      <div class="footer-brand"><img src="assets/images/thailand-sports-almanac-logo.jpg" alt="Thailand Sports Almanac"><p>DIGITAL SPORTS GATEWAY FOR ALL</p><div class="socials"><a href="#facebook" aria-label="Facebook">f</a><a href="#x" aria-label="X">𝕏</a><a href="#youtube" aria-label="YouTube">▶</a><a href="#instagram" aria-label="Instagram">◎</a></div></div>
+      <div><h3>ข้อมูลกีฬา</h3><a href="#events">ข่าวและกิจกรรม</a><a href="#venues">สนามกีฬา</a><a href="#dashboard">ข้อมูลและสถิติ</a><a href="#about">คลังความรู้</a></div>
+      <div><h3>ช่วยเหลือ</h3><a href="#footer">คู่มือใช้งาน</a><a href="#footer">คำถามที่พบบ่อย</a><a href="#footer">นโยบายความเป็นส่วนตัว</a><a href="#footer">ติดต่อเรา</a></div>
+      <address><h3>สำนักงานปลัดกระทรวง<br>การท่องเที่ยวและกีฬา</h3><p>เลขที่ 4 ถนนราชดำเนินนอก<br>แขวงวัดโสมนัส เขตป้อมปราบศัตรูพ่าย<br>กรุงเทพมหานคร 10100</p><a href="tel:021000000">☎ 0 2100 0000</a><a href="mailto:sportsalmanac@mots.go.th">✉ sportsalmanac@mots.go.th</a></address>
+    </div>
+    <div class="container footer-bottom"><p>© 2026 Thailand Sports Almanac. สงวนลิขสิทธิ์</p><p>เว็บไซต์ภาครัฐที่ทุกคนเข้าถึงได้ <span>WCAG 2.1 AA</span></p></div>
+  </footer>
+
+  <dialog class="venue-modal" id="venue-modal" aria-labelledby="modal-title">
+    <button class="modal-close" type="button" aria-label="ปิด">×</button>
+    <img id="modal-image" src="" alt="">
+    <div><span class="kicker">SPORTS FACILITY</span><h2 id="modal-title"></h2><p id="modal-detail"></p><button class="primary-button" type="button">ดูข้อมูลสนามกีฬา <span>→</span></button></div>
+  </dialog>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+.province-page{background:#f6f6f2;color:var(--ink,#0a1229);padding:96px 0 120px}
+.province-page-hero{max-width:1320px;margin:0 auto 36px;display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:end}
+.province-page-hero small{display:block;color:#7d8ea6;font:600 11px/1 'Noto Sans Thai',sans-serif;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px}
+.province-page-hero h1{font:800 clamp(36px,4.4vw,64px)/1.12 'Noto Sans Thai',sans-serif;letter-spacing:-.02em;margin:0 0 14px}
+.province-page-hero h1 em{font-style:normal;color:var(--blue,#1677ff)}
+.province-page-hero p{margin:0;color:#617089;line-height:1.7;max-width:56ch}
+.province-page-tools{display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-end}
+.province-page-tools label{display:grid;gap:8px;font-size:12px;color:#617089}
+.province-page-tools select,.province-page-tools input{min-width:220px;border:1px solid rgba(10,18,41,.12);border-radius:14px;padding:12px 14px;background:#fff;font:600 14px 'Noto Sans Thai',sans-serif;color:var(--ink)}
+.province-page-layout{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:300px 1fr;gap:18px;align-items:stretch}
+.province-page-sidebar{background:#fff;border:1px solid rgba(10,18,41,.08);border-radius:24px;padding:22px;display:flex;flex-direction:column;gap:22px;box-shadow:0 18px 50px rgba(10,18,41,.05)}
+.province-page-sidebar h2,.province-page-sidebar h3{margin:0;font:750 18px/1.2 'Noto Sans Thai',sans-serif}
+.province-page-sidebar p{margin:6px 0 0;color:#617089;font-size:13px;line-height:1.6}
+.province-kpi-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.province-kpi-grid div{background:#f7faf9;border:1px solid rgba(10,18,41,.06);border-radius:16px;padding:14px}
+.province-kpi-grid strong{display:block;font:750 26px/1 'Noto Sans Thai',sans-serif;color:var(--blue,#1677ff);letter-spacing:-.04em}
+.province-kpi-grid span{display:block;margin-top:6px;font-size:11px;color:#7d8ea6}
+.province-category-grid{display:grid;gap:8px}
+.province-category-chip{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:10px;border:1px solid rgba(10,18,41,.08);border-radius:14px;padding:10px 12px;background:#fff;text-align:left;cursor:pointer;transition:.2s ease}
+.province-category-chip i{width:10px;height:10px;border-radius:50%;box-shadow:0 0 0 2px #fff}
+.province-category-chip span{font-size:13px;color:#334155}
+.province-category-chip strong{font:700 14px 'Noto Sans Thai',sans-serif;color:var(--ink)}
+.province-category-chip.active,.province-category-chip:hover{border-color:rgba(22,119,255,.35);background:rgba(22,119,255,.04)}
+.province-top-sports{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.province-top-sports li{display:grid;grid-template-columns:1fr 72px 42px;align-items:center;gap:10px}
+.province-top-sports li.empty{grid-template-columns:1fr;color:#8aa0ad;font-size:13px}
+.province-top-sports b{font-size:12px;font-weight:550}
+.province-top-sports i{height:8px;background:#e8eef4;border-radius:999px;overflow:hidden}
+.province-top-sports i:after{content:"";display:block;width:var(--value);height:100%;background:linear-gradient(90deg,#1677ff,#54c7f5)}
+.province-top-sports strong{text-align:right;font:650 12px 'Noto Sans Thai',sans-serif}
+.province-map-panel{background:linear-gradient(180deg,#edf4ff 0%,#f7faf9 100%);border:1px solid rgba(10,18,41,.08);border-radius:28px;overflow:hidden;box-shadow:0 30px 80px rgba(10,18,41,.08);min-height:720px;display:flex;flex-direction:column}
+.province-map-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:22px 24px 0}
+.province-map-head h2{margin:0;font:750 clamp(24px,2.4vw,32px)/1.05 'Noto Sans Thai',sans-serif}
+.province-map-head p{margin:8px 0 0;color:#617089;font-size:13px;line-height:1.5}
+.province-map-actions{display:flex;gap:10px;flex-wrap:wrap}
+.province-map-actions select,.province-map-actions button{border:1px solid rgba(10,18,41,.12);border-radius:12px;padding:10px 12px;background:#fff;font:600 13px 'Noto Sans Thai',sans-serif;cursor:pointer}
+.province-map-stage{position:relative;flex:1;min-height:620px;margin:18px 18px 0;background:#e5eee9;border-radius:22px 22px 0 0;overflow:hidden}
+#province-map-svg{width:100%;height:100%;display:block;touch-action:none}
+.province-district-path{cursor:pointer;transition:fill .2s ease}
+.province-district-path:hover{fill:rgba(213,233,221,.95)!important}
+.province-district-label{font:650 11px 'Noto Sans Thai',sans-serif;fill:#29434f;stroke:#fff;stroke-width:3px;paint-order:stroke;pointer-events:none}
+.province-venue-dot{filter:drop-shadow(0 1px 2px rgba(5,25,55,.35))}
+.province-map-tooltip{position:absolute;z-index:5;pointer-events:none;transform:translate(-50%,calc(-100% - 12px));background:rgba(5,25,55,.96);color:#fff;padding:10px 12px;border-radius:12px;font-size:12px;line-height:1.45;opacity:0;transition:opacity .15s ease;max-width:260px}
+.province-map-tooltip.visible{opacity:1}
+.province-map-tooltip strong{display:block;font-size:13px;margin-bottom:3px}
+.province-map-tooltip span{color:#b8c7d8}
+.province-map-key{display:flex;flex-wrap:wrap;gap:10px 16px;padding:14px 24px 18px;color:#617089;font-size:11px}
+.province-map-key span{display:inline-flex;align-items:center;gap:6px}
+.province-map-key i{width:8px;height:8px;border-radius:50%}
+.venue-archive{max-width:1320px;margin:34px auto 0}
+.venue-archive-head{display:flex;justify-content:space-between;align-items:flex-end;gap:18px;margin-bottom:22px;flex-wrap:wrap}
+.venue-archive-head small{display:block;color:#7d8ea6;font:600 11px/1 'Noto Sans Thai',sans-serif;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
+.venue-archive-head h2{margin:0;font:750 clamp(28px,3vw,42px)/1.05 'Noto Sans Thai',sans-serif;letter-spacing:-.03em}
+.venue-archive-head h2 em{font-style:normal;color:var(--blue,#1677ff)}
+.venue-archive-head p{margin:8px 0 0;color:#617089;font-size:13px}
+.venue-archive-controls{display:flex;gap:10px;flex-wrap:wrap}
+.venue-archive-controls input,.venue-archive-controls select{border:1px solid rgba(10,18,41,.12);border-radius:12px;padding:11px 14px;background:#fff;font:600 13px 'Noto Sans Thai',sans-serif;min-width:180px}
+.venue-archive-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.venue-archive-card{position:relative;display:block;border:0;padding:0;border-radius:18px;overflow:hidden;background:#0c2141;color:#fff;text-align:left;text-decoration:none;cursor:pointer;box-shadow:0 14px 40px rgba(10,18,41,.12);transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s ease}
+.venue-archive-card:hover{transform:translateY(-6px);box-shadow:0 22px 50px rgba(10,18,41,.2)}
+.venue-archive-card:focus-visible{outline:3px solid #1677ff;outline-offset:3px}
+.venue-archive-media{position:relative;height:190px;overflow:hidden;background:linear-gradient(135deg,#0c2141,#1677ff)}
+.venue-archive-media img{width:100%;height:100%;object-fit:cover;transition:transform .75s cubic-bezier(.22,1,.36,1),filter .35s ease;filter:saturate(.88)}
+.venue-archive-card:hover .venue-archive-media img{transform:scale(1.08);filter:saturate(1)}
+.venue-archive-media:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(4,18,38,.92),rgba(4,18,38,.08) 58%)}
+.venue-archive-badge{position:absolute;z-index:2;left:12px;top:12px;padding:5px 10px;border-radius:999px;background:rgba(7,26,61,.82);backdrop-filter:blur(8px);font:700 11px 'Noto Sans Thai',sans-serif;letter-spacing:.02em}
+.venue-archive-body{position:absolute;z-index:2;left:16px;right:16px;bottom:14px}
+.venue-archive-body small{display:block;font:700 11px/1.35 'Noto Sans Thai',sans-serif;opacity:.82;margin-bottom:6px}
+.venue-archive-body h3{margin:0 0 8px;font:700 16px/1.35 'Noto Sans Thai',sans-serif;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.venue-archive-body p{margin:0;font:500 12px/1.45 'Noto Sans Thai',sans-serif;color:rgba(255,255,255,.82);display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+.venue-archive-body b{display:inline-block;margin-top:10px;font:700 12px 'Noto Sans Thai',sans-serif;opacity:.95}
+.venue-archive-card[data-type="stadium"] .venue-archive-media{background:linear-gradient(135deg,#0a2f6e,#1677ff)}
+.venue-archive-card[data-type="multipurpose"] .venue-archive-media{background:linear-gradient(135deg,#3b2d8f,#7c5cff)}
+.venue-archive-card[data-type="public"] .venue-archive-media{background:linear-gradient(135deg,#0d5a44,#14a87b)}
+.venue-archive-card[data-type="fitness"] .venue-archive-media{background:linear-gradient(135deg,#8a4512,#ff8a3d)}
+.venue-archive-card[data-type="training"] .venue-archive-media{background:linear-gradient(135deg,#065f72,#0db7d6)}
+.venue-archive-card[data-type="science"] .venue-archive-media{background:linear-gradient(135deg,#6b1f5d,#d954b8)}
+.venue-archive-empty{grid-column:1/-1;padding:48px 24px;text-align:center;border:1px dashed rgba(10,18,41,.14);border-radius:18px;color:#617089;background:#fff}
+.venue-archive-pagination{display:flex;justify-content:center;align-items:center;gap:8px;margin-top:24px;flex-wrap:wrap}
+.venue-archive-pagination button,.venue-archive-pagination span{border:1px solid rgba(10,18,41,.1);background:#fff;border-radius:10px;padding:8px 12px;font:650 13px 'Noto Sans Thai',sans-serif;cursor:pointer;min-width:40px}
+.venue-archive-pagination button:disabled{opacity:.4;cursor:not-allowed}
+.venue-archive-pagination button.active{background:#1677ff;border-color:#1677ff;color:#fff}
+.venue-modal{border:0;border-radius:22px;padding:0;width:min(760px,calc(100% - 28px));overflow:hidden;box-shadow:0 40px 100px rgba(0,0,0,.38)}
+.venue-modal::backdrop{background:rgba(3,15,36,.76);backdrop-filter:blur(5px)}
+.venue-modal-media{height:280px;background:linear-gradient(135deg,#0c2141,#1677ff);position:relative;overflow:hidden}
+.venue-modal-media[data-type="multipurpose"]{background:linear-gradient(135deg,#3b2d8f,#7c5cff)}
+.venue-modal-media[data-type="public"]{background:linear-gradient(135deg,#0d5a44,#14a87b)}
+.venue-modal-media[data-type="fitness"]{background:linear-gradient(135deg,#8a4512,#ff8a3d)}
+.venue-modal-media[data-type="training"]{background:linear-gradient(135deg,#065f72,#0db7d6)}
+.venue-modal-media[data-type="science"]{background:linear-gradient(135deg,#6b1f5d,#d954b8)}
+.venue-modal-media img{width:100%;height:100%;object-fit:cover}
+.venue-modal-media:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(4,18,38,.55),transparent 50%)}
+.venue-modal-close{position:absolute;right:14px;top:14px;z-index:3;border:0;width:40px;height:40px;border-radius:50%;background:rgba(7,26,61,.88);color:#fff;font-size:24px;line-height:1;cursor:pointer}
+.venue-modal-body{padding:24px 26px 28px;background:#fff}
+.venue-modal-body small{display:block;color:#7d8ea6;font:700 12px 'Noto Sans Thai',sans-serif;margin-bottom:8px}
+.venue-modal-body h2{margin:0 0 10px;font:750 24px/1.25 'Noto Sans Thai',sans-serif;color:var(--ink,#0a1229)}
+.venue-modal-body>p{margin:0 0 18px;color:#617089;font:500 14px/1.65 'Noto Sans Thai',sans-serif}
+.venue-modal-meta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:0 0 20px}
+.venue-modal-meta div{background:#f7faf9;border:1px solid rgba(10,18,41,.06);border-radius:12px;padding:12px 14px}
+.venue-modal-meta dt{font:600 12px 'Noto Sans Thai',sans-serif;color:#7d8ea6;margin:0 0 4px}
+.venue-modal-meta dd{margin:0;font:650 14px 'Noto Sans Thai',sans-serif;color:var(--ink,#0a1229)}
+.venue-modal-map{margin:0 0 18px;border-radius:12px;overflow:hidden;background:#e8eef4;aspect-ratio:16/10}
+.venue-modal-map iframe{width:100%;height:100%;border:0;display:block}
+.venue-modal-actions{display:flex;flex-wrap:wrap;gap:10px}
+.venue-modal-actions a{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:11px 16px;font:700 13px 'Noto Sans Thai',sans-serif;text-decoration:none}
+.venue-modal-actions a:first-child{background:#0a1229;color:#fff}
+.venue-modal-actions a:last-child{border:1px solid rgba(10,18,41,.12);color:var(--ink,#0a1229)}
+.province-page-loading{position:fixed;inset:0;display:grid;place-items:center;background:rgba(246,246,242,.82);z-index:90;font:600 14px 'Noto Sans Thai',sans-serif;color:#617089}
+.province-page-loading.hidden{display:none}
+.map-province-cta{max-width:1320px;margin:22px auto 0;padding:0!important;background:transparent!important;border:0!important;display:flex!important;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+.map-province-cta-copy strong{display:block;font:750 clamp(22px,2.2vw,28px)/1.1 'Noto Sans Thai',sans-serif;color:var(--gateway-navy,#0a1229);letter-spacing:-.03em}
+.map-province-cta-copy span{display:block;margin-top:8px;color:var(--gateway-muted,#617089);font-size:var(--type-caption,12px);line-height:1.6;max-width:48ch}
+.map-province-cta-link{display:inline-flex;align-items:center;gap:10px;border-radius:999px;padding:14px 22px;background:var(--gateway-navy,#0a1229);color:#fff!important;text-decoration:none;font:700 14px 'Noto Sans Thai',sans-serif;white-space:nowrap;transition:transform .2s ease,background .2s ease}
+.map-province-cta-link:hover{background:#1677ff;transform:translateY(-1px)}
+@media(max-width:960px){
+  .province-page{padding:88px 0 90px}
+  .province-page-hero,.province-page-layout{grid-template-columns:1fr}
+  .province-page-tools{justify-content:stretch}
+  .province-page-tools select,.province-page-tools input{min-width:0;width:100%}
+  .province-map-stage{min-height:520px}
+  .map-province-cta{align-items:flex-start}
+  .venue-archive-grid{grid-template-columns:1fr 1fr}
+  .venue-archive-controls{width:100%}
+  .venue-archive-controls input,.venue-archive-controls select{flex:1;min-width:0}
+}
+@media(max-width:640px){
+  .venue-archive-grid{grid-template-columns:1fr}
+  .venue-modal-meta{grid-template-columns:1fr}
+}
+/* Premium polish layer */
+.province-page{background:radial-gradient(ellipse 70% 40% at 0% 0%,rgba(18,108,243,.08),transparent 55%),radial-gradient(ellipse 50% 30% at 100% 0%,rgba(186,255,25,.1),transparent 50%),linear-gradient(180deg,#eef3f8 0%,#f3f6f9 40%,#edf1f5 100%)!important}
+.province-page-hero h1{font-size:clamp(28px,3vw,42px)!important}
+.province-kpi-grid strong{font-family:'Noto Sans Thai',sans-serif!important;font-variant-numeric:tabular-nums}
+.province-category-chip,.province-page-tools select,.province-page-tools input,.venue-archive-controls input,.venue-archive-controls select,.province-map-actions select,.province-map-actions button{transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s cubic-bezier(.22,1,.36,1),border-color .35s ease,background .35s ease}
+.province-category-chip:hover,.province-map-actions button:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(7,27,52,.08)}
+.province-page-loading{font-family:'Noto Sans Thai',sans-serif}
+
+/* Province report / export — Data Insight inspired */
+.province-report{max-width:1320px;margin:40px auto 0;display:grid;gap:22px}
+.province-report-bar{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;align-items:center;padding:14px 16px;border-radius:18px;background:rgba(255,255,255,.92);border:1px solid rgba(10,18,41,.08);box-shadow:0 12px 32px rgba(10,18,41,.04);position:sticky;top:72px;z-index:15;backdrop-filter:blur(12px)}
+.province-story-nav{display:flex;flex-wrap:wrap;gap:6px}
+.province-story-nav a{display:inline-flex;align-items:center;min-height:36px;padding:6px 12px;border-radius:999px;border:1px solid transparent;color:#334155;text-decoration:none;font:650 12px/1.2 'Noto Sans Thai',sans-serif;transition:transform .3s cubic-bezier(.22,1,.36,1),background .3s ease,border-color .3s ease}
+.province-story-nav a:hover{background:#eef5ff;border-color:rgba(22,119,255,.25);transform:translateY(-1px)}
+.province-export{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.province-export>span{font:700 11px/1 'Noto Sans Thai',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#7d8ea6}
+.province-export button{min-height:38px;padding:8px 12px;border-radius:12px;border:1px solid rgba(10,18,41,.12);background:#fff;font:650 12px 'Noto Sans Thai',sans-serif;cursor:pointer;transition:transform .3s cubic-bezier(.22,1,.36,1),background .3s ease,box-shadow .3s ease}
+.province-export button:hover{transform:translateY(-2px);background:#1677ff;border-color:#1677ff;color:#fff;box-shadow:0 10px 24px rgba(22,119,255,.25)}
+.province-metric-strip{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}
+.province-metric-strip article{padding:16px 14px;border-radius:16px;background:#fff;border:1px solid rgba(10,18,41,.08)}
+.province-metric-strip strong{display:block;font:800 1.55rem/1 'Noto Sans Thai',sans-serif;font-variant-numeric:tabular-nums;letter-spacing:-.03em;color:#0a1229}
+.province-metric-strip span{display:block;margin-top:6px;font:600 11px/1.35 'Noto Sans Thai',sans-serif;color:#7d8ea6}
+.province-insight-stack{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.province-insight-stack article{padding:18px;border-radius:18px;background:linear-gradient(145deg,#0a2744,#126cf3);color:#fff;min-height:120px}
+.province-insight-stack small{display:block;font:700 10px/1 'Noto Sans Thai',sans-serif;letter-spacing:.08em;color:#baff19;margin-bottom:8px}
+.province-insight-stack strong{display:block;font:800 1.05rem/1.35 'Noto Sans Thai',sans-serif;margin-bottom:6px}
+.province-insight-stack p{margin:0;font:400 .85rem/1.6 'Noto Sans Thai',sans-serif;color:rgba(255,255,255,.78)}
+.province-report-block,.province-panel{background:#fff;border:1px solid rgba(10,18,41,.08);border-radius:22px;padding:22px;box-shadow:0 14px 40px rgba(10,18,41,.04)}
+.province-report-head{display:flex;justify-content:space-between;gap:16px;align-items:end;flex-wrap:wrap;margin-bottom:16px}
+.province-report-head small,.province-panel header small{display:block;font:700 10px/1 'Noto Sans Thai',sans-serif;letter-spacing:.08em;color:#7d8ea6;margin-bottom:6px}
+.province-report-head h2,.province-panel header h3{margin:0;font:800 1.25rem/1.25 'Noto Sans Thai',sans-serif}
+.province-report-head p,.province-panel header p{margin:6px 0 0;color:#617089;font:400 .88rem/1.6 'Noto Sans Thai',sans-serif}
+.province-district-bars{display:grid;gap:8px;margin-bottom:18px}
+.province-district-bars .bar-row,.province-rank-bars .bar-row{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,2fr) auto;gap:10px;align-items:center}
+.province-district-bars b,.province-rank-bars b{font:650 .82rem/1.3 'Noto Sans Thai',sans-serif}
+.province-district-bars i,.province-rank-bars i{display:block;height:8px;border-radius:999px;background:#e8eef4;overflow:hidden}
+.province-district-bars i::after,.province-rank-bars i::after{content:"";display:block;height:100%;width:var(--w,0%);border-radius:inherit;background:linear-gradient(90deg,#126cf3,#baff19)}
+.province-district-bars strong,.province-rank-bars strong{font:750 .82rem/1 'Noto Sans Thai',sans-serif;font-variant-numeric:tabular-nums}
+.province-scorecard-scroll{overflow:auto;border-radius:14px;border:1px solid rgba(10,18,41,.08)}
+.province-scorecard{width:100%;border-collapse:collapse;min-width:920px;font:500 13px/1.4 'Noto Sans Thai',sans-serif}
+.province-scorecard th,.province-scorecard td{padding:10px 12px;border-bottom:1px solid rgba(10,18,41,.06);text-align:left;white-space:nowrap}
+.province-scorecard th{background:#f3f7fb;font-weight:700;color:#44566c;position:sticky;top:0}
+.province-scorecard tbody tr{cursor:pointer;transition:background .25s ease}
+.province-scorecard tbody tr:hover,.province-scorecard tbody tr.is-active{background:rgba(18,108,243,.06)}
+.province-report-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.province-panel.wide{grid-column:1/-1}
+.province-panel header{margin-bottom:14px}
+.province-rank-bars{display:grid;gap:8px}
+.province-mini-kpis{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.province-mini-kpis span{display:inline-flex;align-items:center;gap:6px;padding:8px 12px;border-radius:999px;background:#f3f7fb;font:650 12px 'Noto Sans Thai',sans-serif;color:#334155}
+.province-mini-kpis b{font-variant-numeric:tabular-nums;color:#126cf3}
+.province-event-list,.province-competition-list,.province-people-list{display:grid;gap:8px}
+.province-event-list a,.province-competition-list article,.province-people-list article{display:grid;gap:4px;padding:12px 14px;border-radius:14px;border:1px solid rgba(10,18,41,.07);background:#fafbfd;text-decoration:none;color:inherit;transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s ease}
+.province-event-list a:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(10,18,41,.08)}
+.province-event-list strong,.province-competition-list strong,.province-people-list strong{font:700 .9rem/1.35 'Noto Sans Thai',sans-serif}
+.province-event-list span,.province-competition-list span,.province-people-list span{font:500 .8rem/1.5 'Noto Sans Thai',sans-serif;color:#617089}
+.province-quality-board{display:grid;gap:8px}
+.province-quality-board div{display:flex;justify-content:space-between;gap:12px;padding:12px 14px;border-radius:12px;background:#f3f7fb}
+.province-quality-board dt{margin:0;font:600 12px 'Noto Sans Thai',sans-serif;color:#617089}
+.province-quality-board dd{margin:0;font:800 14px 'Noto Sans Thai',sans-serif;font-variant-numeric:tabular-nums}
+.province-report.is-empty .province-report-grid,.province-report.is-empty .province-report-block,.province-report.is-empty .province-metric-strip,.province-report.is-empty .province-insight-stack{opacity:.45;pointer-events:none}
+@media(max-width:1100px){
+  .province-metric-strip{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .province-insight-stack,.province-report-grid{grid-template-columns:1fr}
+}
+@media(max-width:720px){
+  .province-metric-strip{grid-template-columns:1fr 1fr}
+  .province-report-bar{position:static}
+  .province-district-bars .bar-row,.province-rank-bars .bar-row{grid-template-columns:1fr auto;gap:6px}
+  .province-district-bars i,.province-rank-bars i{grid-column:1/-1}
+}
+@media print{
+  .nav-shell,.noise,.skip,.province-page-loading,.province-export,.footer-bottom,footer,.province-story-nav{display:none!important}
+  .province-page{padding-top:24px!important;background:#fff!important}
+  .province-report-bar{position:static;box-shadow:none;border:0;padding:0}
+  .province-map-panel,.venue-archive{break-inside:avoid}
+}
